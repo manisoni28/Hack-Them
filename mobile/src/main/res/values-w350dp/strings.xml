@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="drawer_item_first">HACKS</string>
+    <string name="drawer_item_second">NEWS</string>
+    <string name="drawer_item_third">CHAT</string>
+    <string name="drawer_item_fourth">SETTINGS</string>
+    <string name="drawer_item_fifth">RATE US</string>
+    <string name="drawer_item_sixth">INVITE</string>
+    <string name="drawer_item_seventh">ABOUT US</string>
+    <string name="drawer_item_eighth">HOME</string>
+    <string name="drawer_item_ninth">Categories</string>
+    <string name="drawer_item_tenth">Tenth item</string>
+    <string name="drawer_item_eleventh">Eleventh item</string>
+    <string name="drawer_item_twelfth">Twelfth item</string>
+    <string name="tech_crunch">Tech Crunch</string>
+    <string name="nextweb">TheNextWeb</string>
+    <string name="firstpost">FirstPost</string>
+    <string name="mashable">Mashable</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/entry_fragment"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar"/>
+    <TextView
+        android:id="@+id/about_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="15dip"
+        android:text="We are APPic Team that focuses on Making Quality Apps.
+        \nThis App helps You in tricking People and feel Awesome that You Can Trick them.
+        \nEverone wants to do something unrealistic which is appreciate by everyone.So this App will help You in becoming coll among Your Friends and Relatives.
+        \nShare this App with your friends and discuss with other users of the App for many tricks they know and contribute to Chat section also if You Know any Trick.
+        \nProudly Made BY
+                                    \nMANI SONI
+        \n(APP CO-ORDINATOR AT IIIT-ALLAHABAD).
+        \nFollow me on Github and FaceBook via www.github.com/manisoni28 and www.facebook.com/manisoni28"
+        android:lineSpacingMultiplier="1.3"
+        android:autoLink="all"
+        />
+
+</LinearLayout>
+

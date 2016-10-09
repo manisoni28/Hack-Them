@@ -1,0 +1,97 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.droidtitan.lintcleaner'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "net.appic.hack"
+        minSdkVersion 18
+        targetSdkVersion 23
+        versionCode 7
+        versionName "1.1.6"
+    }
+
+    lintOptions {
+        // if true, stop the gradle build if errors are found
+        checkReleaseBuilds false
+        abortOnError false
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    signingConfigs {
+        debug {
+            if (project.hasProperty("KEYSTORE_PATH")) {
+                storeFile file(KEYSTORE_PATH)
+                storePassword KEYSTORE_PASSWORD
+                keyAlias KEY_ALIAS
+                keyPassword KEY_PASSWORD
+            }
+        }
+
+        release {
+            if (project.hasProperty("KEYSTORE_PATH")) {
+                storeFile file(KEYSTORE_PATH)
+                storePassword KEYSTORE_PASSWORD
+                keyAlias KEY_ALIAS
+                keyPassword KEY_PASSWORD
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    maven {
+        url 'http://dl.bintray.com/amulyakhare/maven'
+    }
+}
+
+dependencies {
+    //wearApp project(':wear')
+    // used to generate the Open Source section
+    // https://github.com/mikepenz/AboutLibraries
+    // icon fonts used inside the sample
+    // https://github.com/mikepenz/Android-Iconics
+    // used to showcase how to load images
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //wearApp project(':wear')
+    compile 'com.android.support:appcompat-v7:+'
+    compile 'com.google.android.gms:play-services-wearable:+'
+    compile 'com.melnykov:floatingactionbutton:+'
+    compile 'org.jsoup:jsoup:+'
+    compile 'com.github.bumptech.glide:glide:+'
+    compile 'com.amulyakhare:com.amulyakhare.textdrawable:+'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:+'
+    compile('com.mikepenz:materialdrawer:5.1.8@aar') {
+        transitive = true
+    }
+    compile 'com.mikepenz:material-design-iconic-typeface:2.2.0.1@aar'
+    compile 'com.mikepenz:fontawesome-typeface:4.4.0.1@aar'
+    compile 'com.orhanobut:simplelistview:1.3@aar'
+    // used to showcase how to load images
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    compile 'it.neokree:MaterialTabs:0.11'
+    compile('com.mikepenz:crossfadedrawerlayout:0.3.4@aar') {
+        transitive = true
+    }
+    compile 'com.android.support:cardview-v7:23.0.+'
+    compile 'com.android.support:recyclerview-v7:23.0.+'
+    compile 'com.orhanobut:simplelistview:1.3@aar'
+    compile 'com.github.paolorotolo:appintro:3.4.0'
+    
+}
